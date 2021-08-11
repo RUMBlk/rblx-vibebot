@@ -67,20 +67,3 @@ for i,v in pairs(game:GetService("Players"):GetPlayers()) do
             game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All") end
 	end)
 end
-
-repeat
-    if enabled == true and auto == true then repeat
-        if os.date('!%M') == "00" or os.date('!%M') == "20" or os.date('!%M') == "40" then
-            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(os.date('!We are Vibin there already: %d:%H:%M:%S', os.time() - 1628514000), "All")
-            wait(speed)
-            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Type in chat \"!vibehelp " .. ExName .. "\" for help! My executor could be afk now!", "All")
-            wait(speed)
-            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Also join Vibe DS Server! Search #vibinfumo in twitter for link!", "All")
-            wait(speed)
-            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Or use shortened one: waa.ai/xUIm", "All")
-            wait(60)
-        end
-        wait(speed)
-    until enabled == false end
-    wait(restart_time)
-until end_of_world
